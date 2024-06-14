@@ -1,10 +1,41 @@
-name: First Workflow
-on: pull_request
+name: Pipeline
+on: [push, pull_request]
+
 jobs:
-  first-workflow:
+  test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print greeting
-        run: echo "Hello World!"
-      - name: Print goodbye
-        run: echo "Done - bye!"
+      - name: Roda um comando!
+        run: echo $(pwd)
+
+      - name: Roda outro commando!
+        run: echo $(ls)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# name: First Workflow
+# on: pull_request
+# jobs:
+#   first-workflow:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Print greeting
+#         run: echo "Hello World!"
+#       - name: Print goodbye
+#         run: echo "Done - bye!"
